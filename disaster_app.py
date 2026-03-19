@@ -312,12 +312,58 @@ with tab1:
     else:
         st.markdown('<div class="sim-idle">⚪ SIMULATION IDLE — Press ▶ Start to begin monitoring</div>',unsafe_allow_html=True)
 
-    st.markdown("<br>",unsafe_allow_html=True)
-    m1,m2,m3,m4=st.columns(4)
-    with m1: st.markdown(f'''<div class="metric-box"><div class="metric-val">{st.session_state.total_events}</div><div class="metric-lbl">Zones scanned</div></div>''',unsafe_allow_html=True)
-    with m2: st.markdown(f'''<div class="metric-box"><div class="metric-val" style="color:#E24B4A">{st.session_state.total_red}</div><div class="metric-lbl">RED alerts issued</div></div>''',unsafe_allow_html=True)
-    with m3: st.markdown('<div class="metric-box"><div class="metric-val">13</div><div class="metric-lbl">Indian states monitored</div></div>',unsafe_allow_html=True)
-    with m4: st.markdown('<div class="metric-box"><div class="metric-val" style="color:#3B6D11">99%+</div><div class="metric-lbl">Detection accuracy</div></div>',unsafe_allow_html=True)
+    
+
+    # ✅ STEP 1: CSS (PUT THIS AT TOP OR BEFORE CARDS)
+st.markdown("""
+<style>
+.metric-box {
+    background-color: #1E293B;  /* 🔥 change color here */
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+m1, m2, m3, m4 = st.columns(4)
+
+with m1:
+    st.markdown(f'''
+    <div class="metric-box">
+        <div class="metric-val">{st.session_state.total_events}</div>
+        <div class="metric-lbl">Zones scanned</div>
+    </div>
+    ''', unsafe_allow_html=True)
+
+with m2:
+    st.markdown(f'''
+    <div class="metric-box">
+        <div class="metric-val" style="color:#E24B4A">{st.session_state.total_red}</div>
+        <div class="metric-lbl">RED alerts issued</div>
+    </div>
+    ''', unsafe_allow_html=True)
+
+with m3:
+    st.markdown('''
+    <div class="metric-box">
+        <div class="metric-val">13</div>
+        <div class="metric-lbl">Indian states monitored</div>
+    </div>
+    ''', unsafe_allow_html=True)
+
+with m4:
+    st.markdown('''
+    <div class="metric-box">
+        <div class="metric-val" style="color:#3B6D11">99%+</div>
+        <div class="metric-lbl">Detection accuracy</div>
+    </div>
+    ''', unsafe_allow_html=True)
 
     st.markdown("<br>",unsafe_allow_html=True)
     left,right=st.columns([3,2])
