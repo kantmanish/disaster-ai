@@ -465,36 +465,110 @@ with tab2:
 # ════════════════════════════
 with tab3:
     st.subheader("📊 System Architecture")
+
     st.markdown("""
     | Module | Algorithm | Accuracy | Purpose |
     |--------|-----------|----------|---------|
-    | 1 — Image Detection | CNN (3 Conv layers) | 100% | Classifies satellite images |
-    | 2 — Alert Generation | Decision Tree | 99% | RED / ORANGE / YELLOW / GREEN |
-    | 3 — False Alarm Filter | KNN (k=5) | 99% | Validates against history |
-    | 4 — Evacuation Routing | A* Search | Optimal | Safest path to safe zone |
+    | 1 — Image Detection | CNN (3 Conv layers) | 100% | Classifies satellite images into 4 disaster types |
+    | 2 — Alert Generation | Decision Tree | 99% | Generates RED / ORANGE / YELLOW / GREEN alerts |
+    | 3 — False Alarm Filter | KNN (k=5) | 99% | Validates alerts against historical records |
+    | 4 — Evacuation Routing | A* Search | Optimal | Computes safest path avoiding obstacles |
+    | 5 — Risk Scoring | Weighted scoring model | — | Personal disaster risk score by state and season |
+    | 6 — Scenario Prediction | Multi-factor formula | — | Real-time what-if disaster prediction engine |
     """)
+
     st.divider()
-    st.subheader("🇮🇳 Coverage")
+    st.subheader("🖥️ App Features")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("""
+        **Tab 1 — Live Simulation**
+        - Auto-cycles through 13 India disaster scenarios
+        - CNN detection with satellite image
+        - RED alert shakes and pulses
+        - A* evacuation route per disaster
+        - Live event log with timestamps
+
+        **Tab 2 — India Risk Map**
+        - 16 real Indian locations monitored
+        - Plotly dark-theme interactive map
+        - Markers sized by severity
+        - Hover for full disaster details
+        - Active alerts table with causes
+        """)
+    with col2:
+        st.markdown("""
+        **Tab 4 — Risk Calculator**
+        - All 30 Indian states covered
+        - 5 disaster types per state
+        - Seasonal multipliers (12 months)
+        - Gauge chart + bar chart
+        - Compared to national average
+        - Precautions checklist
+
+        **Tab 5 — Scenario Simulator**
+        - 6 environmental sliders
+        - 5 India preset scenarios
+        - Radar chart + bar chart
+        - Live A* route recomputation
+        - Actions by alert level
+        """)
+
+    st.divider()
+    st.subheader("🇮🇳 India Coverage")
     st.markdown("""
-    - **Flood zones:** Bihar, Assam, West Bengal, Maharashtra, Tamil Nadu, Kerala
-    - **Wildfire zones:** Uttarakhand, Karnataka, Odisha, Himachal Pradesh
-    - **Landslide zones:** Sikkim, Himachal Pradesh, Kerala, Uttarakhand
-    - **Cyclone zones:** Odisha, Tamil Nadu, Andhra Pradesh
+    | Disaster Type | States Covered |
+    |---------------|----------------|
+    | Flood | Bihar, Assam, West Bengal, Maharashtra, Tamil Nadu, Kerala, UP |
+    | Wildfire | Uttarakhand, Karnataka, Odisha, Himachal Pradesh, MP |
+    | Landslide | Sikkim, Himachal Pradesh, Kerala, Uttarakhand, Manipur |
+    | Cyclone | Odisha, Tamil Nadu, Andhra Pradesh, West Bengal, Gujarat |
+    | Earthquake | J&K, Sikkim, Gujarat, Uttarakhand, Northeast states |
     """)
+
+    st.divider()
+    st.subheader("📈 Project Stats")
+    s1, s2, s3, s4 = st.columns(4)
+    with s1:
+        st.markdown(\'\'\'<div class="metric-box">
+        <div class="metric-val">6</div>
+        <div class="metric-lbl">AI algorithms</div></div>\'\'\',
+        unsafe_allow_html=True)
+    with s2:
+        st.markdown(\'\'\'<div class="metric-box">
+        <div class="metric-val">30</div>
+        <div class="metric-lbl">Indian states</div></div>\'\'\',
+        unsafe_allow_html=True)
+    with s3:
+        st.markdown(\'\'\'<div class="metric-box">
+        <div class="metric-val">5</div>
+        <div class="metric-lbl">App tabs</div></div>\'\'\',
+        unsafe_allow_html=True)
+    with s4:
+        st.markdown(\'\'\'<div class="metric-box">
+        <div class="metric-val">99%+</div>
+        <div class="metric-lbl">Accuracy</div></div>\'\'\',
+        unsafe_allow_html=True)
+
     st.divider()
     st.subheader("👨‍💻 Team")
-    c1,c2=st.columns(2)
+    c1, c2 = st.columns(2)
     with c1:
-        st.markdown("**Manish Kant**")
-        st.markdown("Roll No: 24CS2025")
-        st.markdown("Module: CNN + System Integration")
+        st.markdown("""
+        **Manish Kant**
+        Roll No: 24CS2025
+        Module: CNN + System Integration + Deployment
+        """)
     with c2:
-        st.markdown("**OM JEE**")
-        st.markdown("Roll No: 24CS2028")
-        st.markdown("Module: Decision Tree + A* Routing")
+        st.markdown("""
+        **OM JEE**
+        Roll No: 24CS2028
+        Module: Decision Tree + A* Routing + UI
+        """)
     st.divider()
-    st.markdown("**Tech stack:** Python · PyTorch · Scikit-learn · Plotly · Streamlit · NumPy · Matplotlib")
-    # ════════════════════════════
+    st.markdown("**Tech stack:** Python · PyTorch · Scikit-learn · Plotly · Streamlit · NumPy · Matplotlib · Streamlit Cloud")
+    st.markdown("**Live at:** https://disaster-ai-zf6ayb3rv7xjosoura93xf.streamlit.app")
 # TAB 4 — RISK CALCULATOR
 # ════════════════════════════
 with tab4:
