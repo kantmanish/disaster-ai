@@ -1,9 +1,7 @@
 streamlit
-folium
-streamlit-folium>=0.13.0
+plotly
 numpy
 pandas
 matplotlib
 scikit-learn
 Pillow
-branca
