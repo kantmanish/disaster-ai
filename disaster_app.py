@@ -8,6 +8,7 @@ import heapq
 import time
 import random
 from datetime import datetime
+import risk_calculator
 
 st.set_page_config(
     page_title="India Disaster Management AI",
@@ -276,7 +277,7 @@ def build_india_map():
     return fig
 
 # ── TABS ─────────────────────────────────────────────────
-tab1,tab2,tab3=st.tabs(["🔴 Live Simulation","🗺 India Risk Map","📊 System Info"])
+tab1,tab2,tab3,tab4=st.tabs(["🔴 Live Simulation","🗺 India Risk Map","📊 System Info","🔢 Risk Calculator"])
 
 # ════════════════════════════
 # TAB 1
@@ -492,3 +493,8 @@ with tab3:
         st.markdown("Module: Decision Tree + A* Routing")
     st.divider()
     st.markdown("**Tech stack:** Python · PyTorch · Scikit-learn · Plotly · Streamlit · NumPy · Matplotlib")
+    # ════════════════════════════
+# TAB 4 — RISK CALCULATOR
+# ════════════════════════════
+with tab4:
+    risk_calculator.render()
