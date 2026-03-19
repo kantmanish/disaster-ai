@@ -531,25 +531,13 @@ with tab3:
     st.subheader("📈 Project Stats")
     s1, s2, s3, s4 = st.columns(4)
     with s1:
-        st.markdown(\'\'\'<div class="metric-box">
-        <div class="metric-val">6</div>
-        <div class="metric-lbl">AI algorithms</div></div>\'\'\',
-        unsafe_allow_html=True)
+        st.metric("AI algorithms", "6")
     with s2:
-        st.markdown(\'\'\'<div class="metric-box">
-        <div class="metric-val">30</div>
-        <div class="metric-lbl">Indian states</div></div>\'\'\',
-        unsafe_allow_html=True)
+        st.metric("Indian states", "30")
     with s3:
-        st.markdown(\'\'\'<div class="metric-box">
-        <div class="metric-val">5</div>
-        <div class="metric-lbl">App tabs</div></div>\'\'\',
-        unsafe_allow_html=True)
+        st.metric("App tabs", "5")
     with s4:
-        st.markdown(\'\'\'<div class="metric-box">
-        <div class="metric-val">99%+</div>
-        <div class="metric-lbl">Accuracy</div></div>\'\'\',
-        unsafe_allow_html=True)
+        st.metric("Accuracy", "99%+")
 
     st.divider()
     st.subheader("👨‍💻 Team")
