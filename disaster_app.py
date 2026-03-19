@@ -54,7 +54,7 @@ def get_alert(sev,pop,infra,weather):
     if sev>=7 and pop>1000: return 3,"RED","🚨","alert-red"
     if sev>=7 or infra>60:  return 2,"ORANGE","🔶","alert-orange"
     if sev>=4 or weather>=6:return 1,"YELLOW","⚠️","alert-yellow"
-    return 0,"GREEN","✅","alert-green"
+    return 0,"GREEN","","alert-green"
 
 def make_image(cls):
     img=np.zeros((180,180,3),dtype=np.uint8)
