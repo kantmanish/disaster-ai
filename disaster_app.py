@@ -28,15 +28,14 @@ st.markdown("""
   .alert-green{background:#EAF3DE;border-left:4px solid #3B6D11;padding:12px 16px;border-radius:8px;margin:8px 0}
 
   /* 🔥 UPDATED CARD DESIGN */
-  .metric-box{
-    background: linear-gradient(135deg, #1E293B, #0F172A) !important;
-    border-radius: 14px;
-    padding: 18px 20px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.45);
-    transition: 0.3s ease;
-  }
+ .metric-box{
+  background: linear-gradient(135deg, #1E293B, #0F172A) !important;
+  border-radius: 14px !important;
+  padding: 18px 20px !important;
+  text-align: center !important;
+  color: white !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6) !important;
+}
 
   .metric-box:hover{
     transform: translateY(-5px);
