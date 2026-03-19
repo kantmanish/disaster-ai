@@ -22,9 +22,9 @@ st.markdown("""
   .main-title{font-size:2rem;font-weight:600;color:#E24B4A;margin-bottom:0}
   .sub-title{font-size:0.9rem;color:#888780;margin-bottom:1.5rem}
   .alert-red{background:red;border-left:4px solid #E24B4A;padding:12px 16px;border-radius:8px;margin:8px 0}
-  .alert-orange{background:#FAECE7;border-left:4px solid #D85A30;padding:12px 16px;border-radius:8px;margin:8px 0}
-  .alert-yellow{background:#FAEEDA;border-left:4px solid #BA7517;padding:12px 16px;border-radius:8px;margin:8px 0}
-  .alert-green{background:#EAF3DE;border-left:4px solid #3B6D11;padding:12px 16px;border-radius:8px;margin:8px 0}
+  .alert-orange{background:orange;border-left:4px solid #D85A30;padding:12px 16px;border-radius:8px;margin:8px 0}
+  .alert-yellow{background:yellow;border-left:4px solid #BA7517;padding:12px 16px;border-radius:8px;margin:8px 0}
+  .alert-green{background:green;border-left:4px solid #3B6D11;padding:12px 16px;border-radius:8px;margin:8px 0}
   .metric-box{background:#F1EFE8;border-radius:10px;padding:14px 18px;text-align:center}
   .metric-val{font-size:1.6rem;font-weight:600}
   .metric-lbl{font-size:0.75rem;color:#5F5E5A;margin-top:2px}
