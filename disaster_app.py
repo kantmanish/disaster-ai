@@ -9,6 +9,7 @@ import time
 import random
 from datetime import datetime
 import risk_calculator
+import scenario_simulator
 
 st.set_page_config(
     page_title="India Disaster Management AI",
@@ -277,7 +278,7 @@ def build_india_map():
     return fig
 
 # ── TABS ─────────────────────────────────────────────────
-tab1,tab2,tab3,tab4=st.tabs(["🔴 Live Simulation","🗺 India Risk Map","📊 System Info","🔢 Risk Calculator"])
+tab1,tab2,tab3,tab4,tab5=st.tabs(["🔴 Live Simulation","🗺 India Risk Map","📊 System Info","🔢 Risk Calculator","🎮 Scenario Simulator"])
 
 # ════════════════════════════
 # TAB 1
@@ -498,3 +499,9 @@ with tab3:
 # ════════════════════════════
 with tab4:
     risk_calculator.render()
+
+# ════════════════════════════
+# TAB 5 — SCENARIO SIMULATOR
+# ════════════════════════════
+with tab5:
+    scenario_simulator.render()
