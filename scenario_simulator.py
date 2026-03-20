@@ -206,33 +206,52 @@ def render():
     st.markdown("**⚡ Quick presets**")
     p1, p2, p3, p4, p5 = st.columns(5)
 
-    def set_preset(r, w, t, h, sl, p):
-        st.session_state.sim_rain  = r
-        st.session_state.sim_wind  = w
-        st.session_state.sim_temp  = t
-        st.session_state.sim_hum   = h
-        st.session_state.sim_slope = sl
-        st.session_state.sim_pop   = p
+    p1, p2, p3, p4, p5 = st.columns(5)
 
     with p1:
         if st.button("🌊 Kerala Flood", use_container_width=True):
-            set_preset(95, 25, 28, 95, 20, 65)
+            st.session_state["sim_rain"]  = 95
+            st.session_state["sim_wind"]  = 25
+            st.session_state["sim_temp"]  = 28
+            st.session_state["sim_hum"]   = 95
+            st.session_state["sim_slope"] = 20
+            st.session_state["sim_pop"]   = 65
             st.rerun()
     with p2:
         if st.button("🔥 Uttarakhand Fire", use_container_width=True):
-            set_preset(5, 40, 88, 15, 60, 30)
+            st.session_state["sim_rain"]  = 5
+            st.session_state["sim_wind"]  = 40
+            st.session_state["sim_temp"]  = 88
+            st.session_state["sim_hum"]   = 15
+            st.session_state["sim_slope"] = 60
+            st.session_state["sim_pop"]   = 30
             st.rerun()
     with p3:
         if st.button("🌀 Odisha Cyclone", use_container_width=True):
-            set_preset(80, 95, 35, 90, 10, 55)
+            st.session_state["sim_rain"]  = 80
+            st.session_state["sim_wind"]  = 95
+            st.session_state["sim_temp"]  = 35
+            st.session_state["sim_hum"]   = 90
+            st.session_state["sim_slope"] = 10
+            st.session_state["sim_pop"]   = 55
             st.rerun()
     with p4:
         if st.button("⛰ Sikkim Landslide", use_container_width=True):
-            set_preset(85, 20, 20, 90, 95, 25)
+            st.session_state["sim_rain"]  = 85
+            st.session_state["sim_wind"]  = 20
+            st.session_state["sim_temp"]  = 20
+            st.session_state["sim_hum"]   = 90
+            st.session_state["sim_slope"] = 95
+            st.session_state["sim_pop"]   = 25
             st.rerun()
     with p5:
         if st.button("✅ Normal day", use_container_width=True):
-            set_preset(10, 15, 30, 45, 15, 40)
+            st.session_state["sim_rain"]  = 10
+            st.session_state["sim_wind"]  = 15
+            st.session_state["sim_temp"]  = 30
+            st.session_state["sim_hum"]   = 45
+            st.session_state["sim_slope"] = 15
+            st.session_state["sim_pop"]   = 40
             st.rerun()
 
     st.markdown("<br>", unsafe_allow_html=True)
